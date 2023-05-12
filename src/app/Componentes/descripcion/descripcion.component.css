@@ -22,7 +22,7 @@
     text-align: center;
 }
 .title li:nth-child(2){
-    height: 20px;
+    padding: 10px;
 }
 
 .Description{
