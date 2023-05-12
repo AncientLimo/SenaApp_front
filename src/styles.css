@@ -30,8 +30,8 @@ h1,h2,h3,h4,h5,h6,p{
 .content-information{
     display: flex;
     flex-direction: column;
-    width: 1000px; 
-    padding: 0 50px;  
+    width: 1000px;
+    padding: 0 70px;
 }
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
