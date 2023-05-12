@@ -10,6 +10,7 @@ import { ElipseInformationComponent } from './Componentes/elipse-information/eli
 import { FiltroSearchComponent } from './Componentes/filtro-search/filtro-search.component';
 import { DireccionComponent } from './Componentes/Barra-Navegacion/direccion/direccion.component';
 import { DescripcionComponent } from './Componentes/descripcion/descripcion.component';
+import { ChargeWheelComponent } from './Componentes/charge-wheel/charge-wheel.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DescripcionComponent } from './Componentes/descripcion/descripcion.comp
     ElipseInformationComponent,
     FiltroSearchComponent,
     DireccionComponent,
-    DescripcionComponent
+    DescripcionComponent,
+    ChargeWheelComponent
   ],
   imports: [
     BrowserModule,
