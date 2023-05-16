@@ -11,6 +11,7 @@ import { FiltroSearchComponent } from './Componentes/filtro-search/filtro-search
 import { DireccionComponent } from './Componentes/Barra-Navegacion/direccion/direccion.component';
 import { DescripcionComponent } from './Componentes/descripcion/descripcion.component';
 import { ChargeWheelComponent } from './Componentes/charge-wheel/charge-wheel.component';
+import { FooterComponent } from './Componentes/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ChargeWheelComponent } from './Componentes/charge-wheel/charge-wheel.co
     FiltroSearchComponent,
     DireccionComponent,
     DescripcionComponent,
-    ChargeWheelComponent
+    ChargeWheelComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

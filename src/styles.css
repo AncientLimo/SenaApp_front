@@ -4,17 +4,23 @@ body{
     color: #fff;
     font-family: 'Roboto Condensed';
     margin: 0;
+    position: relative;
 }
 .img-fondo{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
-    right: 25%;
-    left: 25%;
-    top:25%;
-    bottom: 25%;
-    z-index: -1;
+    top:20px;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 .img-fondo svg{
     display: flex;
+    width: 100vh;
+    height: 100vh;
 }
 li{
     list-style: none;
