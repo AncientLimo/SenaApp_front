@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { freeSet } from '@coreui/icons';
+import { IconSetService } from '@coreui/icons-angular';
+import { CoreService } from './shared/services/core.service';
 
 
 @Component({
@@ -7,5 +11,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  logout() {
+    window.location.href = '/login';
+  }
+
   title = 'frontend_frabrica';
+  constructor(
+    private router: Router,
+    public iconSet: IconSetService
+  ) {
+    // iconSet singleton
+    iconSet.icons = { ...freeSet };
+  }
+
+  ngOnInit() {
+    
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+        return;
+      }
+      window.scrollTo(0, 0);
+    });
+  }
 }

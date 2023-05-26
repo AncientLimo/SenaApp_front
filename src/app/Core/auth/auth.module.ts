@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
 import { CompanyComponent } from './company/company.component';
+import { SnotifyService } from 'ng-snotify';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { CompanyComponent } from './company/company.component';
     CommonModule,
     AuthRoutingModule,
     ReactiveFormsModule,
+
   ],
   exports:[
     LoginComponent,

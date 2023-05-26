@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ActivationCompanyUserModel } from 'src/app/shared/models/activation-company-user.model';
 import { CoreService } from 'src/app/shared/services/core.service';
 import { UINotificationService } from 'src/app/shared/services/uinotification.service';
+import { SnotifyService } from 'ng-snotify';
 
 const KEY_CODE_ENTER:number = 13;
 

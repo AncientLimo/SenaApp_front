@@ -2,30 +2,43 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ComponentesModule } from './Componentes/componentes.module';
-import { NavComponent } from './Componentes/Barra-Navegacion/nav/nav.component';
-import { LoginComponent } from './Core/auth/login/login.component';
 import { AuthModule } from './Core/auth/auth.module';
-import { CoreModule } from './Core/core.module';
 import { NavBarModule } from './Core/nav-bar/nav-bar.module';
-import { DireccionComponent } from './Componentes/Barra-Navegacion/direccion/direccion.component';
 import { BarraNavegacionModule } from './Componentes/Barra-Navegacion/barra-navegacion.module';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HttpClientModule} from '@angular/common/http';
+import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
+import { RouterModule } from '@angular/router';
+import { IconSetService } from '@coreui/icons-angular';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NavBarModule,
     BarraNavegacionModule,
-    AuthModule
+    AuthModule,
+    HttpClientModule,
+    SnotifyModule,
+    RouterModule
 
         
   ],
-  providers: [], 
+  providers: [
+    {
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  },IconSetService
+    ,{  provide: 'SnotifyToastConfig', useValue: ToastDefaults}
+    , SnotifyService
+  ],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

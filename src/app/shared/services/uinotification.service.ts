@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SnotifyPosition, SnotifyService, SnotifyToastConfig } from 'ng-snotify';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -19,7 +18,7 @@ export class UINotificationService {
 
   constructor(private _notificationService: SnotifyService) { }
 
-  success(body: string, title: string = '') {
+  success(body: string, title: string = null!) {
     if (title) {
       this._notificationService.success(body, title, this.config);
     } else {
@@ -28,7 +27,7 @@ export class UINotificationService {
   }
 
 
-  error(body: string, title: string = '') {
+  error(body: string, title: string = null!) {
     if (title) {
       this._notificationService.error(body, title, this.config);
     } else {
