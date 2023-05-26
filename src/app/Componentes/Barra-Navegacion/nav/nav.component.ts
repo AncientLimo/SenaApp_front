@@ -1,4 +1,4 @@
-import { AfterViewInit,Component, Directive , QueryList, ElementRef, ViewChild, ViewChildren,Renderer2 } from '@angular/core';
+import { OnInit,AfterViewInit,Component, Directive , QueryList, ElementRef, ViewChild, ViewChildren,Renderer2 } from '@angular/core';
 
 
 @Component({
@@ -7,12 +7,12 @@ import { AfterViewInit,Component, Directive , QueryList, ElementRef, ViewChild, 
   styleUrls: ['./nav.component.css']
 })
 
-export class NavComponent {
+
+
+export class NavComponent{
 
   
 @ViewChildren('path') public path!:  QueryList<ElementRef>;
-
-
 
 
 }

@@ -1,36 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ComponentesModule } from './Componentes/componentes.module';
 import { NavComponent } from './Componentes/Barra-Navegacion/nav/nav.component';
-import { ProgramaFormativoComponent } from './Componentes/programa-formativo/programa-formativo.component';
-import { GuiaMonitoreoColoresComponent } from './Componentes/guia-monitoreo-colores/guia-monitoreo-colores.component';
-import { ElipseInformationComponent } from './Componentes/elipse-information/elipse-information.component';
-import { FiltroSearchComponent } from './Componentes/filtro-search/filtro-search.component';
+import { LoginComponent } from './Core/auth/login/login.component';
+import { AuthModule } from './Core/auth/auth.module';
+import { CoreModule } from './Core/core.module';
+import { NavBarModule } from './Core/nav-bar/nav-bar.module';
 import { DireccionComponent } from './Componentes/Barra-Navegacion/direccion/direccion.component';
-import { DescripcionComponent } from './Componentes/descripcion/descripcion.component';
-import { ChargeWheelComponent } from './Componentes/charge-wheel/charge-wheel.component';
-import { FooterComponent } from './Componentes/footer/footer.component';
+import { BarraNavegacionModule } from './Componentes/Barra-Navegacion/barra-navegacion.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
-    ProgramaFormativoComponent,
-    GuiaMonitoreoColoresComponent,
-    ElipseInformationComponent,
-    FiltroSearchComponent,
-    DireccionComponent,
-    DescripcionComponent,
-    ChargeWheelComponent,
-    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NavBarModule,
+    BarraNavegacionModule,
+    AuthModule
+
+        
   ],
-  providers: [],
+  providers: [], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }
