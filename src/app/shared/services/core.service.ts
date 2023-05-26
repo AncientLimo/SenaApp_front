@@ -6,7 +6,7 @@ import { EmpresaModel } from '../models/empresa.model';
 import { PersonaModel } from '../models/persona.model';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { ActivationCompanyUserModel } from '../models/activation-company-user.model';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 
 const API_URL = environment.url;
